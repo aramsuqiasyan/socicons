@@ -1,0 +1,124 @@
+body{
+	background: black;
+	font-family: Verdana;
+	font-weight: bold;
+
+}
+/*navigation*/
+
+nav{
+	display: flex;
+	text-align: center;
+	justify-content: space-around;
+	width: 80%;
+	height: 95vh;
+	align-items:center;
+	margin: 0 auto;
+}
+
+nav div{
+	perspective: 800px;
+	position: relative;
+}
+
+div img{
+	width: 150px;
+	transform: rotateX(45deg) rotateY(0) rotateZ(-30deg ) skewX(10deg) translateZ(0px);
+	position: absolute;
+	transition: 0.5s all cubic-bezier(0,1.49,.8,1.04);
+	filter: grayscale(1);
+}
+
+
+
+div a:hover > img:nth-child(1){
+	transform: rotateX(45deg) rotateY(0) rotateZ(-30deg ) skewX(10deg) translateZ(0px);
+	opacity: 0.1;
+	filter: grayscale(0);
+}
+div a:hover > img:nth-child(2){
+	transform: rotateX(45deg) rotateY(0) rotateZ(-30deg ) skewX(10deg) translateZ(15px);
+	opacity: 0.2;
+	filter: grayscale(0);
+}
+div a:hover > img:nth-child(3){
+	transform: rotateX(45deg) rotateY(0) rotateZ(-30deg ) skewX(10deg) translateZ(30px);
+	opacity: 0.4;
+	filter: grayscale(0);
+}
+div a:hover > img:nth-child(4){
+	transform: rotateX(45deg) rotateY(0) rotateZ(-30deg ) skewX(10deg) translateZ(45px);
+	opacity: 0.6;
+	filter: grayscale(0);
+}
+div a:hover > img:nth-child(5){
+	transform: rotateX(45deg) rotateY(0) rotateZ(-30deg ) skewX(10deg) translateZ(60px);
+	opacity: 0.8;
+	filter: grayscale(0);
+}
+div a > img:nth-child(6){
+	/*transition: 0.5s all ease;*/
+}
+div a:hover > img:nth-child(6){
+	transform: rotateX(0deg) rotateY(0) rotateZ(0deg ) skewX(0deg) translateZ(75px);
+	opacity: 1;
+	filter: grayscale(0);
+}
+
+div a:active > img:nth-child(6){
+	animation: myAnim .3s ease-in-out infinite alternate ;
+}
+
+@keyframes myAnim{
+	0%{
+		transform: rotateX(0) rotateY(0deg) rotateZ(3deg ) skewX(0deg) translateZ(75px) ;
+	}
+	50%{
+		transform: rotateX(0) rotateY(0deg) rotateZ(-3deg ) skewX(0deg) translateZ(75px) ;
+	}
+	100%{
+		transform: rotateX(0) rotateY(0deg) rotateZ(3deg ) skewX(0deg) translateZ(75px) ;
+
+	}
+
+}
+
+/*navigation end*/
+
+/*title*/
+h1 a{
+	text-decoration: none;
+	color: blue;
+}
+h1{	
+	font-size: 50px;
+	color: #f200ff;
+	position: absolute;
+	left: calc(50% - 90px);
+	top: 50px;
+	transform: rotateX(0) rotateY(0deg) rotateZ(0deg ) skewX(0deg);
+	transform-origin: center;
+	filter: grayscale(1) blur(3px);
+	transition: 0.5s all;
+}
+
+h1:hover{
+	cursor: no-drop;
+	filter: grayscale(0) blur(0);
+	animation: myAnim2 .1s ease-in-out infinite alternate ;
+}
+@keyframes myAnim2{
+	0%{
+		transform: rotateX(0) rotateY(0deg) rotateZ(3deg ) skewX(0deg) ;
+	}
+	50%{
+		transform: rotateX(0) rotateY(0deg) rotateZ(-3deg ) skewX(0deg);
+	}
+	100%{
+		transform: rotateX(0) rotateY(0deg) rotateZ(3deg ) skewX(0deg);
+
+	}
+
+}
+
+/*title end*/
